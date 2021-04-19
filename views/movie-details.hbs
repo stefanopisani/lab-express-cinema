@@ -1,0 +1,28 @@
+<main class="movies movie-spec">
+    <div class="img">
+<img src="{{movie.image}}" alt="movie.title" style="width: 250px; height: 350px;">
+    </div>
+
+<div class="characteristics">
+<h1> {{movie.title}} </h1>
+<h3> Director: {{movie.director}} </h3>
+<h4> Stars </h4>
+<ul>
+    {{#each movie.stars}}
+    <li> {{this}} </li>
+    {{/each}}
+</ul>
+
+<p> {{ movie.description }} </p>
+
+{{#each movie.showtimes}}
+    <span> {{this}} | </span> 
+    {{/each}}
+
+<h4>
+<a href="/movies"> < Back to movies </a> 
+</h4>
+
+</div>
+
+</main>
